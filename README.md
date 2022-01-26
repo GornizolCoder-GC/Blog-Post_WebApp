@@ -1,3 +1,3 @@
 # Blog-Post
- personal blog site /n
- Full Python Django app
+ personal blog site 
+# Full Python Django app
