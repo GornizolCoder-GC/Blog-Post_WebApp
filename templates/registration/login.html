@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Saytga kirish {% endblock title %}
+
+{% block content %}
+<h2>Saytga Kirish</h2><br>
+<p>Pastdagi berilgan qatorlarga foydalanuvchi login va parolini to`g`ri kiriting!</p>
+<form method="POST">{% csrf_token %}
+    {{ form|crispy }}
+    <p>Kalit so`zingiz esdan chiqdimi? Unda quyidagi <a href="{% url 'password_reset' %}">Link</a> orqli kalit so`zni qayta tiklang!</p>
+    <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">Kirish</button>
+</form>
+{% endblock content %}

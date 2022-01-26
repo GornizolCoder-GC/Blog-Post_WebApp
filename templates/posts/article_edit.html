@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Maqolani tahrirlash {% endblock title %}
+
+{% block content %}
+<h2>Maqolani tahrirlash</h2><br>
+<p>Quyida <strong>"{{object.title}}"</strong> nomli maqola tahrirlanadi. O`zgarishlar yakunlangach SAQLASH tugmasini bosing.</p>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{form.media}}
+    {{form|crispy}}
+    <button type="submit" class="btn btn-info btn-lg">Saqlash</button>
+</form>
+{% endblock content %}

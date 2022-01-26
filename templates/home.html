@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Asosiy sahifa{% endblock title %}
+
+{% block content %}
+<!--    {% if user.is_authenticated %}-->
+<!--        <h2>BlogCopy saytimizga xo`sh kelibsiz!</h2><br>-->
+<!--        <p>Salom, <strong style="font-size:20px;">{{ user.username }}</strong></p>-->
+<!--            <a href="{% url 'logout' %}" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Chiqish</a>-->
+<!--    {% else %}-->
+<!--        <h4>Ro`yhatdan o`tmagan foydalanuvchi aniqlandi!</h4><br>-->
+<!--        <p>Kechirasiz, siz ro`yhatdan o`tmagansiz! Iltimos ro`yhatdan o`ting.)</p>-->
+<!--        <a href="{% url 'login' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Kirish</a>-->
+<!--        <a href="{% url 'signup' %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Ro`yhatdan o`tish</a>-->
+<!--    {% endif %}-->
+
+        <div class="jumbotron">
+
+          <h1 class="display-4">
+              Assalomu alaykum!
+          </h1>
+            <p class="lead">Behruz Nuriddinovning shaxsiy blog saytiga xush kelibsiz!</p>
+                <hr class="my-4">
+                <p>Pastda berilgan tugmacha orqali siz saytdagi tuli - xil qiziqarli postlar va maqolalar bilan tanishishngiz mumkin.</p>
+            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Postlarni ko`rish</a>
+        </div>
+
+{% endblock content %}
